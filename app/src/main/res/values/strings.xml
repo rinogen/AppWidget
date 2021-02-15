@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BroadcastReceiver</string>
+    <string name="power_connected">connect</string>
+    <string name="power_disconnet">dissconnect</string>
+</resources>
