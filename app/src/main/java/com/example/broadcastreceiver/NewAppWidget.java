@@ -27,12 +27,12 @@ public class NewAppWidget extends AppWidgetProvider {
         count++;
 
         String dateString= DateFormat.getTimeInstance(DateFormat.SHORT).format(new Date());
-        String tanggal = new SimpleDateFormat("EEEEEE,dd/MM/YYYY", new Locale("in", "ID")).format(new Date());
+        String currentDate = new SimpleDateFormat("EEEEEE,dd/MM/YYYY", new Locale("in", "ID")).format(new Date());
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
         views.setTextViewText(R.id.appwidget_id, appWidgetId+"");
         views.setTextViewText(R.id.appwidget_update, count+"@"+dateString);
-        views.setTextViewText(R.id.txt_view_date, tanggal+"");
+        views.setTextViewText(R.id.txt_view_date, currentDate+"");
 
         SharedPreferences.Editor prefEditor=prefs.edit();
         prefEditor.putInt(COUNT_KEY+appWidgetId,count);
